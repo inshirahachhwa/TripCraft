@@ -1,0 +1,47 @@
+/* TripCraft styles */
+:root {
+  --tc-primary: #0d6efd;
+  --tc-dark: #0b2545;
+  --tc-accent: #ff7a59;
+}
+body { background: #f4f7fb; }
+.tc-nav { background: linear-gradient(90deg, var(--tc-dark), #13447a); }
+.tc-nav .nav-link { color: rgba(255,255,255,.8); border-radius: .5rem; }
+.tc-nav .nav-link:hover { color: #fff; }
+.tc-nav .nav-link.active { color: #fff; background: rgba(255,255,255,.15); }
+
+.hero {
+  background: linear-gradient(135deg, rgba(11,37,69,.85), rgba(13,110,253,.75)),
+    url("https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1400&q=60") center/cover;
+}
+.card { border: 0; border-radius: 1rem; }
+.btn-primary { background: var(--tc-primary); }
+
+.day-card { border-left: 5px solid var(--tc-primary); }
+.activity {
+  display: flex; gap: .75rem; align-items: flex-start;
+  padding: .6rem .75rem; border-radius: .6rem; background: #f8fafc; margin-bottom: .5rem;
+}
+.activity .time { font-weight: 600; color: var(--tc-primary); min-width: 3.5rem; }
+.activity .actions { margin-left: auto; white-space: nowrap; }
+.activity .cost { font-size: .8rem; }
+
+.weather-chip {
+  display: inline-flex; align-items: center; gap: .4rem;
+  background: #e8f1ff; color: var(--tc-dark); border-radius: 2rem; padding: .25rem .75rem; font-size: .85rem;
+}
+.dest-hero img { width: 100%; max-height: 240px; object-fit: cover; border-radius: 1rem; }
+.stat-tile { background: #fff; border-radius: 1rem; padding: 1rem; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+.stat-tile .v { font-size: 1.5rem; font-weight: 700; }
+
+.pack-item.done label { text-decoration: line-through; color: #98a2b3; }
+.list-group-item-action { cursor: pointer; }
+.trip-card:hover { transform: translateY(-2px); transition: .15s; }
+#map { height: 320px; border-radius: 1rem; }
+
+@media print {
+  .no-print, .nav, footer { display: none !important; }
+  body { background: #fff; }
+  .tab-pane { display: block !important; opacity: 1 !important; }
+  .card { box-shadow: none !important; border: 1px solid #ddd !important; }
+}
